@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marine Guardians</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="hud">
+        <h1>Marine Guardians</h1>
+        <div class="stats">
+          <span>Ronda: <strong id="round">1</strong></span>
+          <span>Vida: <strong id="hp">100</strong></span>
+          <span>XP: <strong id="xp">0</strong></span>
+          <span>Eco-puntos: <strong id="eco">0</strong></span>
+          <span>Basura limpiada: <strong id="cleaned">0</strong></span>
+        </div>
+        <div class="controls">WASD / Flechas para moverte · Espacio para habilidad</div>
+      </header>
+
+      <section class="character-picker" id="picker">
+        <h2>Elige tu guardián marino</h2>
+        <div class="cards">
+          <button class="card" data-char="turtle">
+            <h3>Tortuga</h3>
+            <p>Alta vida y defensa temporal con caparazón.</p>
+          </button>
+          <button class="card" data-char="puffer">
+            <h3>Pez Globo</h3>
+            <p>Ataque automático en área con daño constante.</p>
+          </button>
+          <button class="card" data-char="seahorse">
+            <h3>Caballito de Mar</h3>
+            <p>Coloca minas para control de zonas.</p>
+          </button>
+        </div>
+      </section>
+
+      <canvas id="game" width="960" height="540" aria-label="Juego Marine Guardians"></canvas>
+
+      <section class="shop hidden" id="shop">
+        <h2>Mini-tienda (entre rondas)</h2>
+        <p>Usa eco-puntos para prepararte para la siguiente ola.</p>
+        <div class="shop-grid">
+          <button data-upgrade="speed">+Velocidad (20)</button>
+          <button data-upgrade="damage">+Daño (25)</button>
+          <button data-upgrade="defense">+Defensa (25)</button>
+          <button data-upgrade="range">+Rango (20)</button>
+          <button data-upgrade="heal">Curar 30 vida (30)</button>
+        </div>
+        <button id="nextRound">Iniciar siguiente ronda</button>
+      </section>
+
+      <section class="messages" id="message"></section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
