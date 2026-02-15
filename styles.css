@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+  --bg: #021423;
+  --panel: #0d2a3f;
+  --accent: #34d6ff;
+  --good: #6cf58f;
+  --warn: #ffd46b;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #06304d, var(--bg));
+  color: #eef7ff;
+}
+.layout {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.hud, .shop, .character-picker, .messages {
+  background: color-mix(in srgb, var(--panel) 90%, #000);
+  border: 1px solid #1f4965;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+}
+.controls { color: #9bc4df; font-size: 13px; margin-top: 4px; }
+#game {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #1f4965;
+  background: linear-gradient(#04273d, #021423);
+}
+.cards, .shop-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+button {
+  background: #123852;
+  color: #d8efff;
+  border: 1px solid #2e688a;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+.hidden { display: none; }
+.messages { min-height: 46px; color: var(--warn); }
